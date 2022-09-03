@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('product/{id_category}/{name_product}', [\App\Http\Controllers\ProductController::class, 'getProduct']);
